@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MainMenu.UI
 {
-    public partial class frmAddRemove : Form
+    public partial class frmOrder : Form
     {
-        public frmAddRemove()
+        public frmOrder()
         {
             InitializeComponent();
-        }
-
-        private void lblFooterIMS_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

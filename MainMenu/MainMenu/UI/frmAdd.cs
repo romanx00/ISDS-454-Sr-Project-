@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MainMenu.UI
 {
-    public partial class frmBrowse : Form
+    public partial class frmAdd : Form
     {
-        public frmBrowse()
+        public frmAdd()
         {
             InitializeComponent();
         }
@@ -44,16 +44,13 @@ namespace MainMenu.UI
         {
             // opens new form when browse is clicked //
             this.Hide();
-            UI.frmBrowse newBrowseForm = new UI.frmBrowse();
+            UI.frmAdd newBrowseForm = new UI.frmAdd();
             newBrowseForm.Show();
         }
 
         private void addRemoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // opens new form whn add/remove is called//
-            this.Hide();
-            UI.frmAddRemove frmAddRemove = new UI.frmAddRemove();
-            frmAddRemove.Show();
+            
         }
 
         private void repotsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +67,30 @@ namespace MainMenu.UI
             this.Hide();
             UI.frmLogin frmLogin = new UI.frmLogin();
             frmLogin.Show();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //opens new form when Edit is called//
+            this.Hide();
+            UI.frmEdit frmEdit = new UI.frmEdit();
+            frmEdit.Show();
+        }
+
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //opens new form when Remove is called//
+            this.Hide();
+            UI.frmRemove frmRemove = new UI.frmRemove();
+            frmRemove.Show();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //opens new form when order is called//
+            this.Hide();
+            UI.frmOrder frmOrder = new UI.frmOrder();
+            frmOrder.Show();
         }
     }
 }

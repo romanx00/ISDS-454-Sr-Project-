@@ -40,6 +40,8 @@
             this.lblFooterIMS = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblFooterCredit = new System.Windows.Forms.Label();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,10 +59,10 @@
             this.reportsToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.logOutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(1173, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(1176, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 100, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(190, 744);
+            this.menuStrip1.Size = new System.Drawing.Size(187, 744);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,7 +71,7 @@
             this.userToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(177, 71);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(174, 71);
             this.userToolStripMenuItem.Text = "User ";
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
@@ -78,7 +80,7 @@
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(177, 71);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(174, 71);
             this.searchToolStripMenuItem.Text = "Search ";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
@@ -87,17 +89,20 @@
             this.browseToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.browseToolStripMenuItem.Name = "browseToolStripMenuItem";
             this.browseToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.browseToolStripMenuItem.Size = new System.Drawing.Size(177, 71);
-            this.browseToolStripMenuItem.Text = "Browse";
+            this.browseToolStripMenuItem.Size = new System.Drawing.Size(174, 71);
+            this.browseToolStripMenuItem.Text = "Add";
             this.browseToolStripMenuItem.Click += new System.EventHandler(this.browseToolStripMenuItem_Click);
             // 
             // addRemoveToolStripMenuItem
             // 
+            this.addRemoveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.removeToolStripMenuItem});
             this.addRemoveToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addRemoveToolStripMenuItem.Name = "addRemoveToolStripMenuItem";
             this.addRemoveToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(177, 71);
-            this.addRemoveToolStripMenuItem.Text = "Add/Remove";
+            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(174, 71);
+            this.addRemoveToolStripMenuItem.Text = "Edit/Remove";
             this.addRemoveToolStripMenuItem.Click += new System.EventHandler(this.addRemoveToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
@@ -105,7 +110,7 @@
             this.reportsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(177, 71);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(174, 71);
             this.reportsToolStripMenuItem.Text = "Reports ";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
@@ -114,15 +119,16 @@
             this.settingsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(177, 71);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(174, 71);
+            this.settingsToolStripMenuItem.Text = "Order";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(177, 71);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(174, 71);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -155,7 +161,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 702);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1173, 42);
+            this.panel1.Size = new System.Drawing.Size(1176, 42);
             this.panel1.TabIndex = 3;
             // 
             // lblFooterCredit
@@ -169,6 +175,20 @@
             this.lblFooterCredit.Text = "ISDS 454";
             this.lblFooterCredit.UseMnemonic = false;
             this.lblFooterCredit.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(189, 42);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(189, 42);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // frmSearch
             // 
@@ -203,5 +223,7 @@
         private System.Windows.Forms.Label lblFooterIMS;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblFooterCredit;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
     }
 }

@@ -44,17 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\frmAddRemove.cs">
+    <Compile Include="UI\frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmAddRemove.Designer.cs">
-      <DependentUpon>frmAddRemove.cs</DependentUpon>
+    <Compile Include="UI\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmBrowse.cs">
+    <Compile Include="UI\frmRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmBrowse.Designer.cs">
-      <DependentUpon>frmBrowse.cs</DependentUpon>
+    <Compile Include="UI\frmRemove.Designer.cs">
+      <DependentUpon>frmRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAdd.Designer.cs">
+      <DependentUpon>frmAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmEdit.Designer.cs">
+      <DependentUpon>frmEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmHome.cs">
       <SubType>Form</SubType>
@@ -88,11 +100,11 @@
     <Compile Include="UI\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\frmAddRemove.resx">
-      <DependentUpon>frmAddRemove.cs</DependentUpon>
+    <EmbeddedResource Include="UI\frmRemove.resx">
+      <DependentUpon>frmRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmBrowse.resx">
-      <DependentUpon>frmBrowse.cs</DependentUpon>
+    <EmbeddedResource Include="UI\frmAdd.resx">
+      <DependentUpon>frmAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>

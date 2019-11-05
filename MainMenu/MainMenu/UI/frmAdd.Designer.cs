@@ -1,6 +1,6 @@
 ﻿namespace MainMenu.UI
 {
-    partial class frmBrowse
+    partial class frmAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,8 @@
             this.lblFooterIMS = new System.Windows.Forms.Label();
             this.lblFooterCredit = new System.Windows.Forms.Label();
             this.lblMenuBrowse = new System.Windows.Forms.Label();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBrowse.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,10 +58,10 @@
             this.repotsToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.logOutToolStripMenuItem});
-            this.menuBrowse.Location = new System.Drawing.Point(1192, 0);
+            this.menuBrowse.Location = new System.Drawing.Point(1195, 0);
             this.menuBrowse.Name = "menuBrowse";
             this.menuBrowse.Padding = new System.Windows.Forms.Padding(6, 100, 0, 2);
-            this.menuBrowse.Size = new System.Drawing.Size(171, 744);
+            this.menuBrowse.Size = new System.Drawing.Size(168, 744);
             this.menuBrowse.TabIndex = 0;
             this.menuBrowse.Text = "menuStrip1";
             // 
@@ -70,7 +72,7 @@
             this.uSerToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uSerToolStripMenuItem.Name = "uSerToolStripMenuItem";
             this.uSerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.uSerToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.uSerToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.uSerToolStripMenuItem.Text = "User";
             this.uSerToolStripMenuItem.Click += new System.EventHandler(this.uSerToolStripMenuItem_Click);
             // 
@@ -81,7 +83,7 @@
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.searchToolStripMenuItem.Text = "Search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
@@ -92,19 +94,22 @@
             this.browseToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.browseToolStripMenuItem.Name = "browseToolStripMenuItem";
             this.browseToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.browseToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
-            this.browseToolStripMenuItem.Text = "Browse";
+            this.browseToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
+            this.browseToolStripMenuItem.Text = "Add";
             this.browseToolStripMenuItem.Click += new System.EventHandler(this.browseToolStripMenuItem_Click);
             // 
             // addRemoveToolStripMenuItem
             // 
             this.addRemoveToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.addRemoveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.removeToolStripMenuItem});
             this.addRemoveToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.addRemoveToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addRemoveToolStripMenuItem.Name = "addRemoveToolStripMenuItem";
             this.addRemoveToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
-            this.addRemoveToolStripMenuItem.Text = "Add/Remove";
+            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
+            this.addRemoveToolStripMenuItem.Text = "Edit/Remove";
             this.addRemoveToolStripMenuItem.Click += new System.EventHandler(this.addRemoveToolStripMenuItem_Click);
             // 
             // repotsToolStripMenuItem
@@ -114,7 +119,7 @@
             this.repotsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.repotsToolStripMenuItem.Name = "repotsToolStripMenuItem";
             this.repotsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.repotsToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.repotsToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.repotsToolStripMenuItem.Text = "Reports";
             this.repotsToolStripMenuItem.Click += new System.EventHandler(this.repotsToolStripMenuItem_Click);
             // 
@@ -125,8 +130,9 @@
             this.settingsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
+            this.settingsToolStripMenuItem.Text = "Order";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -135,7 +141,7 @@
             this.logOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -146,7 +152,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 702);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1192, 42);
+            this.panel1.Size = new System.Drawing.Size(1195, 42);
             this.panel1.TabIndex = 1;
             // 
             // lblFooterIMS
@@ -182,7 +188,21 @@
             this.lblMenuBrowse.TabIndex = 4;
             this.lblMenuBrowse.Text = "Browse";
             // 
-            // frmBrowse
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            // 
+            // frmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,7 +211,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuBrowse);
             this.MainMenuStrip = this.menuBrowse;
-            this.Name = "frmBrowse";
+            this.Name = "frmAdd";
             this.Text = "frmBrowse";
             this.Load += new System.EventHandler(this.frmBrowse_Load);
             this.menuBrowse.ResumeLayout(false);
@@ -217,5 +237,7 @@
         private System.Windows.Forms.Label lblFooterIMS;
         private System.Windows.Forms.Label lblFooterCredit;
         private System.Windows.Forms.Label lblMenuBrowse;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
     }
 }

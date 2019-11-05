@@ -36,11 +36,11 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.browseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUserMenu = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 702);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1192, 42);
+            this.panel3.Size = new System.Drawing.Size(1195, 42);
             this.panel3.TabIndex = 1;
             // 
             // lblFooterIMS
@@ -89,10 +89,10 @@
             this.reportsToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.logOutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(1192, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(1195, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 100, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(171, 744);
+            this.menuStrip1.Size = new System.Drawing.Size(168, 744);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,7 +102,7 @@
             this.uSerToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.uSerToolStripMenuItem.Name = "uSerToolStripMenuItem";
             this.uSerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.uSerToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.uSerToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.uSerToolStripMenuItem.Text = "User";
             this.uSerToolStripMenuItem.Click += new System.EventHandler(this.uSerToolStripMenuItem_Click);
             // 
@@ -112,7 +112,7 @@
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.searchToolStripMenuItem.Text = "Search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
@@ -122,8 +122,8 @@
             this.browseToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.browseToolStripMenuItem.Name = "browseToolStripMenuItem";
             this.browseToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.browseToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
-            this.browseToolStripMenuItem.Text = "Browse";
+            this.browseToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
+            this.browseToolStripMenuItem.Text = "Add";
             this.browseToolStripMenuItem.Click += new System.EventHandler(this.browseToolStripMenuItem_Click);
             // 
             // addRemoveToolStripMenuItem
@@ -135,9 +135,23 @@
             this.addRemoveToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addRemoveToolStripMenuItem.Name = "addRemoveToolStripMenuItem";
             this.addRemoveToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
-            this.addRemoveToolStripMenuItem.Text = "Add/Remove";
+            this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
+            this.addRemoveToolStripMenuItem.Text = "Edit/Remove";
             this.addRemoveToolStripMenuItem.Click += new System.EventHandler(this.addRemoveToolStripMenuItem_Click);
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.addToolStripMenuItem.Text = "Edit";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -145,7 +159,7 @@
             this.reportsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
@@ -155,8 +169,9 @@
             this.settingsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
+            this.settingsToolStripMenuItem.Text = "Order";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -164,21 +179,9 @@
             this.logOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
-            this.addToolStripMenuItem.Text = "Add";
-            // 
-            // removeToolStripMenuItem
-            // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
-            this.removeToolStripMenuItem.Text = "Remove";
             // 
             // lblUserMenu
             // 
