@@ -38,12 +38,12 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelFooter = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lblFooterCredit = new System.Windows.Forms.Label();
             this.lblIMS = new System.Windows.Forms.Label();
             this.lblMenuMain = new System.Windows.Forms.Label();
             this.menuMain.SuspendLayout();
-            this.panelFooter.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuMain
@@ -65,7 +65,6 @@
             this.menuMain.Size = new System.Drawing.Size(171, 744);
             this.menuMain.TabIndex = 0;
             this.menuMain.Text = "menuStrip1";
-            this.menuMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuMain_ItemClicked);
             // 
             // userToolStripMenuItem
             // 
@@ -140,7 +139,6 @@
             this.settingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(158, 66);
             this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -152,15 +150,15 @@
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
-            // panelFooter
+            // panel1
             // 
-            this.panelFooter.Controls.Add(this.lblFooterCredit);
-            this.panelFooter.Controls.Add(this.lblIMS);
-            this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooter.Location = new System.Drawing.Point(0, 702);
-            this.panelFooter.Name = "panelFooter";
-            this.panelFooter.Size = new System.Drawing.Size(1192, 42);
-            this.panelFooter.TabIndex = 1;
+            this.panel1.Controls.Add(this.lblFooterCredit);
+            this.panel1.Controls.Add(this.lblIMS);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 702);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1192, 42);
+            this.panel1.TabIndex = 1;
             // 
             // lblFooterCredit
             // 
@@ -194,7 +192,6 @@
             this.lblMenuMain.Size = new System.Drawing.Size(146, 31);
             this.lblMenuMain.TabIndex = 2;
             this.lblMenuMain.Text = "Main Menu";
-            this.lblMenuMain.Click += new System.EventHandler(this.lblMenuMain_Click);
             // 
             // MainMenu
             // 
@@ -203,7 +200,7 @@
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1363, 744);
             this.Controls.Add(this.lblMenuMain);
-            this.Controls.Add(this.panelFooter);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuMain);
             this.MainMenuStrip = this.menuMain;
             this.Name = "MainMenu";
@@ -211,8 +208,8 @@
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
-            this.panelFooter.ResumeLayout(false);
-            this.panelFooter.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,7 +225,7 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.Panel panelFooter;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblIMS;
         private System.Windows.Forms.Label lblFooterCredit;
         private System.Windows.Forms.Label lblMenuMain;

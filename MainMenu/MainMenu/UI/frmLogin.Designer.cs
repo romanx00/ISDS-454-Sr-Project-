@@ -1,6 +1,6 @@
 ﻿namespace MainMenu.UI
 {
-    partial class frmSettings
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmLogin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmSettings";
+            this.ClientSize = new System.Drawing.Size(1363, 744);
+            this.Name = "frmLogin";
+            this.Text = "frmLogin";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

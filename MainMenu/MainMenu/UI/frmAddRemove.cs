@@ -16,5 +16,10 @@ namespace MainMenu.UI
         {
             InitializeComponent();
         }
+
+        private void lblFooterIMS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

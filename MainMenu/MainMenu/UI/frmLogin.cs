@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MainMenu.UI
 {
-    public partial class frmSettings : Form
+    public partial class frmLogin : Form
     {
-        public frmSettings()
+        public frmLogin()
         {
             InitializeComponent();
         }

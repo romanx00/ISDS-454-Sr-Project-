@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainMenu.UI
+namespace MainMenu
 {
-    public partial class frmUser : Form
+    public partial class MainMenu : Form
     {
-        public frmUser()
+        public MainMenu()
         {
             InitializeComponent();
-        }
-
-        private void frmUser_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -27,22 +22,15 @@ namespace MainMenu.UI
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void uSerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //opens new form when user button is clicked //
 
             this.Hide();
             UI.frmUser newUserForm = new UI.frmUser();
             newUserForm.Show();
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
+           
+          
 
         }
 
@@ -61,6 +49,7 @@ namespace MainMenu.UI
             this.Hide();
             UI.frmBrowse newBrowseForm = new UI.frmBrowse();
             newBrowseForm.Show();
+
         }
 
         private void addRemoveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +76,12 @@ namespace MainMenu.UI
             this.Hide();
             UI.frmLogin frmLogin = new UI.frmLogin();
             frmLogin.Show();
+
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
