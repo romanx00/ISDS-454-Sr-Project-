@@ -142,14 +142,14 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(176, 36);
             this.addToolStripMenuItem.Text = "Edit";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(176, 36);
             this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
@@ -200,14 +200,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1363, 744);
             this.Controls.Add(this.lblUserMenu);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmUser";
-            this.Text = "frmUser";
+            this.Text = "Users";
             this.Load += new System.EventHandler(this.frmUser_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

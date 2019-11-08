@@ -54,7 +54,7 @@
             // 
             // menuMain
             // 
-            this.menuMain.BackColor = System.Drawing.SystemColors.GrayText;
+            this.menuMain.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.menuMain.Dock = System.Windows.Forms.DockStyle.Right;
             this.menuMain.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -108,7 +108,7 @@
             // addToolStripMenuItem1
             // 
             this.addToolStripMenuItem1.Name = "addToolStripMenuItem1";
-            this.addToolStripMenuItem1.Size = new System.Drawing.Size(180, 36);
+            this.addToolStripMenuItem1.Size = new System.Drawing.Size(133, 36);
             this.addToolStripMenuItem1.Text = "Add";
             // 
             // editRemoveToolStripMenuItem
@@ -127,14 +127,14 @@
             // editToolStripMenuItem1
             // 
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(180, 36);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(176, 36);
             this.editToolStripMenuItem1.Text = "Edit";
             this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
             // 
             // removeToolStripMenuItem1
             // 
             this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(180, 36);
+            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(176, 36);
             this.removeToolStripMenuItem1.Text = "Remove";
             this.removeToolStripMenuItem1.Click += new System.EventHandler(this.removeToolStripMenuItem1_Click);
             // 
@@ -257,14 +257,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1363, 744);
             this.Controls.Add(this.lblMenuMain);
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.menuMain);
             this.MainMenuStrip = this.menuMain;
             this.Name = "MainMenu";
-            this.Text = "Main Menu";
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();

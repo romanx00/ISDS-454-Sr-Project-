@@ -100,6 +100,12 @@
     <Compile Include="UI\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\frmEdit.resx">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmRemove.resx">
       <DependentUpon>frmRemove.cs</DependentUpon>
     </EmbeddedResource>

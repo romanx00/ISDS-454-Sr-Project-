@@ -33,6 +33,8 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.browseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,8 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblFooterIMS = new System.Windows.Forms.Label();
             this.lblMenuAdd = new System.Windows.Forms.Label();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +106,20 @@
             this.addRemoveToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 30, 4, 0);
             this.addRemoveToolStripMenuItem.Size = new System.Drawing.Size(155, 66);
             this.addRemoveToolStripMenuItem.Text = "Edit/Remove";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(176, 36);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(176, 36);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -172,38 +186,25 @@
             this.lblMenuAdd.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblMenuAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.lblMenuAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMenuAdd.Location = new System.Drawing.Point(1204, 39);
+            this.lblMenuAdd.Location = new System.Drawing.Point(1228, 39);
             this.lblMenuAdd.Name = "lblMenuAdd";
-            this.lblMenuAdd.Size = new System.Drawing.Size(158, 29);
+            this.lblMenuAdd.Size = new System.Drawing.Size(103, 29);
             this.lblMenuAdd.TabIndex = 2;
-            this.lblMenuAdd.Text = "Edit/ Remove";
+            this.lblMenuAdd.Text = "Remove";
             this.lblMenuAdd.Click += new System.EventHandler(this.lblMenuAdd_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // removeToolStripMenuItem
-            // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
-            this.removeToolStripMenuItem.Text = "Remove";
-            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // frmRemove
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1363, 744);
             this.Controls.Add(this.lblMenuAdd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmRemove";
-            this.Text = "frmAddRemove";
+            this.Text = "Remove";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
