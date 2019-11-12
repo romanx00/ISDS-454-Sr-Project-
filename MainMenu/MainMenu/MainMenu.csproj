@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMSVHADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMSVHADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +141,17 @@
     <EmbeddedResource Include="UI\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="IMSVHADataSet.xsc">
+      <DependentUpon>IMSVHADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IMSVHADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IMSVHADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IMSVHADataSet.xss">
+      <DependentUpon>IMSVHADataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

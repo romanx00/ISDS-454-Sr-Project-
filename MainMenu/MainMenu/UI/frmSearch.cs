@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.Data.Odbc;
 
 
 namespace MainMenu.UI
@@ -96,26 +97,46 @@ namespace MainMenu.UI
             frmOrder.Show();
         }
 
-        private void frmSearch_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            //to use this properly create a database in sql server called IMSVHA add tables for lucid chart data export or from the 
+            String cs = "data source =.; database= IMSVHA; integrated security=SSPI";
+            using (SqlConnection sqlCon = new SqlConnection(cs))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PRODUCT", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+
+            }
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // connection for sql server not currently working error shows cant connect to user romanx00
-            // cant connect even though this is the correct id/pass tried admin tools, no luck 
+           
 
-            /*
+
+        }
+
+        private void frmSearch_Load(object sender, EventArgs e)
+        { 
+            //to use this properly create a database in sql server called IMSVHA add tables for lucid chart data export or from the 
+            String cs = "data source =.; database= IMSVHA; integrated security=SSPI";
+            using (SqlConnection sqlCon = new SqlConnection(cs))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PRODUCT", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+
+            }
             
-            string connetionString;
-            SqlConnection cnn;
-            connetionString = @"Data Source=LAPTOP-BJ3PDCBD;Initial Catalog=VHAIMS;User ID=romanx00;Password=Ducati350!";
-            cnn = new SqlConnection(connetionString);
-            cnn.Open();
-            MessageBox.Show("Connection Open  !");
-            cnn.Close();
-            */
+   
+
+            
 
         }
     }
