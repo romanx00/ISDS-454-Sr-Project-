@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.Data.Odbc;
+
 
 namespace MainMenu.UI
 {
@@ -91,6 +95,49 @@ namespace MainMenu.UI
             this.Hide();
             UI.frmOrder frmOrder = new UI.frmOrder();
             frmOrder.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //to use this properly create a database in sql server called IMSVHA add tables for lucid chart data export or from the 
+            String cs = "data source =.; database= IMSVHA; integrated security=SSPI";
+            using (SqlConnection sqlCon = new SqlConnection(cs))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PRODUCT", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+
+        }
+
+        private void frmSearch_Load(object sender, EventArgs e)
+        { 
+            //to use this properly create a database in sql server called IMSVHA add tables for lucid chart data export or from the 
+            String cs = "data source =.; database= IMSVHA; integrated security=SSPI";
+            using (SqlConnection sqlCon = new SqlConnection(cs))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PRODUCT", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+
+            }
+            
+   
+
+            
+
         }
     }
 }
