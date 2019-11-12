@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace MainMenu.UI
 {
@@ -91,6 +94,29 @@ namespace MainMenu.UI
             this.Hide();
             UI.frmOrder frmOrder = new UI.frmOrder();
             frmOrder.Show();
+        }
+
+        private void frmSearch_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // connection for sql server not currently working error shows cant connect to user romanx00
+            // cant connect even though this is the correct id/pass tried admin tools, no luck 
+
+            /*
+            
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = @"Data Source=LAPTOP-BJ3PDCBD;Initial Catalog=VHAIMS;User ID=romanx00;Password=Ducati350!";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            MessageBox.Show("Connection Open  !");
+            cnn.Close();
+            */
+
         }
     }
 }
