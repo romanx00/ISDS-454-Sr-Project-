@@ -169,6 +169,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmReports";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace MainMenu.UI
 {
@@ -28,6 +30,8 @@ namespace MainMenu.UI
 
         private void frmBrowse_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iMSVHADataSet.PRODUCT' table. You can move, or remove it, as needed. commented out for right now because it causes a crash
+           // this.pRODUCTTableAdapter.Fill(this.iMSVHADataSet.PRODUCT);
 
         }
 
@@ -121,6 +125,37 @@ namespace MainMenu.UI
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            //add connection to database supplier table 
+        }
+
+        private void btnDepartmnet_Click(object sender, EventArgs e)
+        {
+            //add connection to database department table
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //add connection to database product table 
+            // add connection to database item table 
+
+            //to use this properly create a database in sql server called IMSVHA add tables for lucid chart data export or from the 
+            /*
+            String cs = "data source =.; database= IMSVHA; integrated security=SSPI";
+            using (SqlConnection sqlCon = new SqlConnection(cs))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PRODUCT", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dataGridView1.DataSource = dtbl;
+
+            }
+            */
         }
     }
 }

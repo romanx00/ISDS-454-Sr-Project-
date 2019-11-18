@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuBrowse = new System.Windows.Forms.MenuStrip();
             this.uSerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,8 +74,26 @@
             this.lblZip = new System.Windows.Forms.Label();
             this.txtState = new System.Windows.Forms.TextBox();
             this.lblState = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemBarcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemDescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemQtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iMSVHADataSet = new IMSVHADataSet();
+            this.iMSVHADataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUCTTableAdapter = new IMSVHADataSetTableAdapters.PRODUCTTableAdapter();
             this.menuBrowse.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iMSVHADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iMSVHADataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuBrowse
@@ -327,12 +346,13 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(908, 210);
+            this.btnAdd.Location = new System.Drawing.Point(914, 283);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Item Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblSupplier
             // 
@@ -393,6 +413,7 @@
             this.btnDepartmnet.TabIndex = 23;
             this.btnDepartmnet.Text = "Department Add";
             this.btnDepartmnet.UseVisualStyleBackColor = true;
+            this.btnDepartmnet.Click += new System.EventHandler(this.btnDepartmnet_Click);
             // 
             // btnSupplier
             // 
@@ -402,6 +423,7 @@
             this.btnSupplier.TabIndex = 24;
             this.btnSupplier.Text = "Supplier Add";
             this.btnSupplier.UseVisualStyleBackColor = true;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // txtDepartmentDescription
             // 
@@ -499,12 +521,106 @@
             this.lblState.TabIndex = 33;
             this.lblState.Text = "State";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productIDDataGridViewTextBoxColumn,
+            this.itemBarcodeDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.itemDescDataGridViewTextBoxColumn,
+            this.categoryIDDataGridViewTextBoxColumn,
+            this.departmentIDDataGridViewTextBoxColumn,
+            this.locationDataGridViewTextBoxColumn,
+            this.itemQtyDataGridViewTextBoxColumn,
+            this.supplierIDDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.pRODUCTBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(51, 373);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1094, 303);
+            this.dataGridView1.TabIndex = 37;
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            // 
+            // itemBarcodeDataGridViewTextBoxColumn
+            // 
+            this.itemBarcodeDataGridViewTextBoxColumn.DataPropertyName = "ItemBarcode";
+            this.itemBarcodeDataGridViewTextBoxColumn.HeaderText = "ItemBarcode";
+            this.itemBarcodeDataGridViewTextBoxColumn.Name = "itemBarcodeDataGridViewTextBoxColumn";
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            // 
+            // itemDescDataGridViewTextBoxColumn
+            // 
+            this.itemDescDataGridViewTextBoxColumn.DataPropertyName = "ItemDesc";
+            this.itemDescDataGridViewTextBoxColumn.HeaderText = "ItemDesc";
+            this.itemDescDataGridViewTextBoxColumn.Name = "itemDescDataGridViewTextBoxColumn";
+            // 
+            // categoryIDDataGridViewTextBoxColumn
+            // 
+            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "CategoryID";
+            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "CategoryID";
+            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
+            // 
+            // departmentIDDataGridViewTextBoxColumn
+            // 
+            this.departmentIDDataGridViewTextBoxColumn.DataPropertyName = "DepartmentID";
+            this.departmentIDDataGridViewTextBoxColumn.HeaderText = "DepartmentID";
+            this.departmentIDDataGridViewTextBoxColumn.Name = "departmentIDDataGridViewTextBoxColumn";
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            // 
+            // itemQtyDataGridViewTextBoxColumn
+            // 
+            this.itemQtyDataGridViewTextBoxColumn.DataPropertyName = "ItemQty";
+            this.itemQtyDataGridViewTextBoxColumn.HeaderText = "ItemQty";
+            this.itemQtyDataGridViewTextBoxColumn.Name = "itemQtyDataGridViewTextBoxColumn";
+            // 
+            // supplierIDDataGridViewTextBoxColumn
+            // 
+            this.supplierIDDataGridViewTextBoxColumn.DataPropertyName = "SupplierID";
+            this.supplierIDDataGridViewTextBoxColumn.HeaderText = "SupplierID";
+            this.supplierIDDataGridViewTextBoxColumn.Name = "supplierIDDataGridViewTextBoxColumn";
+            // 
+            // pRODUCTBindingSource
+            // 
+            this.pRODUCTBindingSource.DataMember = "PRODUCT";
+            this.pRODUCTBindingSource.DataSource = this.iMSVHADataSet;
+            // 
+            // iMSVHADataSet
+            // 
+            this.iMSVHADataSet.DataSetName = "IMSVHADataSet";
+            this.iMSVHADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iMSVHADataSetBindingSource
+            // 
+            this.iMSVHADataSetBindingSource.DataSource = this.iMSVHADataSet;
+            this.iMSVHADataSetBindingSource.Position = 0;
+            // 
+            // pRODUCTTableAdapter
+            // 
+            this.pRODUCTTableAdapter.ClearBeforeFill = true;
+            // 
             // frmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1363, 744);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtZip);
             this.Controls.Add(this.lblZip);
             this.Controls.Add(this.txtState);
@@ -541,12 +657,17 @@
             this.Controls.Add(this.menuBrowse);
             this.MainMenuStrip = this.menuBrowse;
             this.Name = "frmAdd";
-            this.Text = "frmBrowse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add";
             this.Load += new System.EventHandler(this.frmBrowse_Load);
             this.menuBrowse.ResumeLayout(false);
             this.menuBrowse.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iMSVHADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iMSVHADataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,5 +720,19 @@
         private System.Windows.Forms.Label lblZip;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.Label lblState;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource iMSVHADataSetBindingSource;
+        private IMSVHADataSet iMSVHADataSet;
+        private System.Windows.Forms.BindingSource pRODUCTBindingSource;
+        private IMSVHADataSetTableAdapters.PRODUCTTableAdapter pRODUCTTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemBarcodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemDescDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn departmentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemQtyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
     }
 }

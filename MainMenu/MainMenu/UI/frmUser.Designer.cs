@@ -207,6 +207,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users";
             this.Load += new System.EventHandler(this.frmUser_Load);
             this.panel3.ResumeLayout(false);

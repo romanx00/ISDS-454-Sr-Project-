@@ -133,14 +133,14 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(176, 36);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(176, 36);
             this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
@@ -343,6 +343,7 @@
             this.Controls.Add(this.lblSearchMenu);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search";
             this.Load += new System.EventHandler(this.frmSearch_Load);
             this.menuStrip1.ResumeLayout(false);
