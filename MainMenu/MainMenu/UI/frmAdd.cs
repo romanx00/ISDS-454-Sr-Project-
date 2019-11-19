@@ -14,6 +14,8 @@ namespace MainMenu.UI
 {
     public partial class frmAdd : Form
     {
+        //creates model for adding items to the product table 
+        PRODUCT model = new PRODUCT();
         public frmAdd()
         {
             InitializeComponent();
@@ -31,7 +33,10 @@ namespace MainMenu.UI
         private void frmBrowse_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'iMSVHADataSet.PRODUCT' table. You can move, or remove it, as needed. commented out for right now because it causes a crash
-           // this.pRODUCTTableAdapter.Fill(this.iMSVHADataSet.PRODUCT);
+            // this.pRODUCTTableAdapter.Fill(this.iMSVHADataSet.PRODUCT);
+            // this clears the form just in case 
+            Clear();
+
 
         }
 
@@ -140,22 +145,34 @@ namespace MainMenu.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //Change string form textbox to int 
+            int ItemQuantity = int.Parse(txtQuantity.Text);
+            int ItemBarcode = int.Parse(txtQuantity.Text);
+
             //add connection to database product table 
-            // add connection to database item table 
 
-            //to use this properly create a database in sql server called IMSVHA add tables for lucid chart data export or from the 
-            /*
-            String cs = "data source =.; database= IMSVHA; integrated security=SSPI";
-            using (SqlConnection sqlCon = new SqlConnection(cs))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PRODUCT", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dataGridView1.DataSource = dtbl;
 
-            }
-            */
+
+           
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {// this clears all text boxes but does not clear the datagrid 
+
+            Clear();
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        void Clear()
+        {
+            txtCompanyName.Text = txtPhoneNumber.Text = txtStreet.Text = txtState.Text = txtZip.Text = ("");
+            txtDepartmentName.Text = txtDepartmentDescription.Text = ("");
+            txtBarcode.Text = txtName.Text = txtDesc.Text = txtLocation.Text = txtQuantity.Text = ("");
         }
     }
 }

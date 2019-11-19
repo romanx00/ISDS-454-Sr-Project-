@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,10 +53,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CATEGORY.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseConnection.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseConnection.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTMENT.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYEE.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
     <Compile Include="IMSVHADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IMSVHADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCT.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
     </Compile>
     <Compile Include="UI\frmOrder.cs">
       <SubType>Form</SubType>
@@ -105,6 +150,9 @@
     <Compile Include="UI\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UPDATE.cs">
+      <DependentUpon>DatabaseConnection.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\frmEdit.resx">
       <DependentUpon>frmEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +189,13 @@
     <EmbeddedResource Include="UI\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="DatabaseConnection.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatabaseConnection.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DatabaseConnection.edmx.diagram">
+      <DependentUpon>DatabaseConnection.edmx</DependentUpon>
+    </None>
     <None Include="IMSVHADataSet.xsc">
       <DependentUpon>IMSVHADataSet.xsd</DependentUpon>
     </None>
@@ -152,6 +207,7 @@
     <None Include="IMSVHADataSet.xss">
       <DependentUpon>IMSVHADataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +220,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseConnection.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DatabaseConnection.Context.cs</LastGenOutput>
+      <DependentUpon>DatabaseConnection.edmx</DependentUpon>
+    </Content>
+    <Content Include="DatabaseConnection.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseConnection.edmx</DependentUpon>
+      <LastGenOutput>DatabaseConnection.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

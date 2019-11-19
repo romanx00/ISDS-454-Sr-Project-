@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="16173e116b254b9284ef231fac072785" Name="Diagram1">
+        <EntityTypeShape EntityType="IMSVHAModel.CATEGORY" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSVHAModel.DEPARTMENT" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSVHAModel.EMPLOYEE" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSVHAModel.ORDER" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSVHAModel.PRODUCT" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSVHAModel.REPORT" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSVHAModel.SUPPLIER" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSVHAModel.UPDATE" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <AssociationConnector Association="IMSVHAModel.FK_PRODUCT_CATEGORY" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_REPORT_CATEGORY" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_PRODUCT_DEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_REPORT_DEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_ORDER_EMPLOYEE" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_ORDER_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_ORDER_REPORT" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_PRODUCT_SUPPLIER" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_REPORT_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSVHAModel.FK_UPDATE_PRODUCT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

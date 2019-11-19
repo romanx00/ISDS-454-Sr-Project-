@@ -88,6 +88,8 @@
             this.iMSVHADataSet = new IMSVHADataSet();
             this.iMSVHADataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUCTTableAdapter = new IMSVHADataSetTableAdapters.PRODUCTTableAdapter();
+            this.lblItem = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
             this.menuBrowse.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -346,7 +348,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(914, 283);
+            this.btnAdd.Location = new System.Drawing.Point(780, 277);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 16;
@@ -540,6 +542,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1094, 303);
             this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -614,12 +617,33 @@
             // 
             this.pRODUCTTableAdapter.ClearBeforeFill = true;
             // 
+            // lblItem
+            // 
+            this.lblItem.AutoSize = true;
+            this.lblItem.Location = new System.Drawing.Point(930, 18);
+            this.lblItem.Name = "lblItem";
+            this.lblItem.Size = new System.Drawing.Size(49, 13);
+            this.lblItem.TabIndex = 38;
+            this.lblItem.Text = "Add Item";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(973, 276);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 39;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // frmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1363, 744);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.lblItem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtZip);
             this.Controls.Add(this.lblZip);
@@ -734,5 +758,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemQtyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblItem;
+        private System.Windows.Forms.Button btnClear;
     }
 }
